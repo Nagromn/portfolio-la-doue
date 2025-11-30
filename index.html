@@ -1,0 +1,1137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<title>Domoina Rajosoa</title>
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="CSS/jquery.fullPage.css" type="text/css"/>
+<link rel="stylesheet" href="CSS/normalize.css" type="text/css"/>
+<link rel="icon" type="image/png" href="IMG/IMG/icon.png" />
+
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="JS/domoina_rajosoa.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+  canvas = document.getElementById("canvas");
+  anim_container = document.getElementById("animation_container");
+  dom_overlay_container = document.getElementById("dom_overlay_container");
+  var comp=AdobeAn.getComposition("629566FEAEFD4577B7BE571CCAC9220F");
+  var lib=comp.getLibrary();
+  var loader = new createjs.LoadQueue(false);
+  loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+  loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+  var lib=comp.getLibrary();
+  loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+  var images=comp.getImages();  
+  if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }  
+}
+function handleComplete(evt,comp) {
+  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+  var lib=comp.getLibrary();
+  var ss=comp.getSpriteSheet();
+  var queue = evt.target;
+  var ssMetadata = lib.ssMetadata;
+  for(i=0; i<ssMetadata.length; i++) {
+    ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+  }
+  exportRoot = new lib.Sansnom1();
+  stage = new lib.Stage(canvas);  
+  //Registers the "tick" event listener.
+  fnStartAnimation = function() {
+    stage.addChild(exportRoot);
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
+  }     
+  //Code to support hidpi screens and responsive scaling.
+  AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]); 
+  AdobeAn.compositionLoaded(lib.properties.id);
+  fnStartAnimation();
+}
+</script>
+
+</head>
+
+<body onload="init();" >
+  <nav class="sidebar"> 
+      <a class="menu cursor" title="Menu">
+          <div class="menu-trigger">
+              <div class="bar-container">
+                  <div class="bar menu-bar-top"></div>
+                  <div class="bar menu-bar-mid"></div>
+                  <div class="bar menu-bar-bottom"></div>
+              </div>
+          </div>
+      </a>     
+      	<ul id="menu">
+      		<li data-menuanchor="home"><span class="homemenu"><a href="index.html#home" class="underline">Home</span></a></li>
+          	<li data-menuanchor="portfolio"><a href="index.html#portfolio" class="underline">Portfolio</a></li>
+            	<li data-menuanchor="apropos"><a href="index.html#apropos" class="underline">À propos</a></li>
+                <li data-menuanchor="competences"><a href="index.html#competences" class="underline">Compétences</a></li>
+            	<li data-menuanchor="contact"><a href="index.html#contact" class="underline">Contact</a></li>
+          </ul>
+  </nav>
+    <div id="fade-wrapper"></div>
+    
+<a href="index.html#home"><h1 id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:60px; height:60px" >
+    <canvas id="canvas" width="60" height="60" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:60px; height:60px; position: absolute; left: 0px; top: 0px; display: block;">
+    </div>
+  </h1></a>
+
+    <!--=========================== HOME ================================-->
+
+    
+<div id="fullpage">
+
+
+            <div class="section fp-auto-height" id="section0">
+              <div class="partieun">              
+              
+  
+<!-- <h2>Domoina Rajosoa</h2><h3>Designer graphiste</h3> -->
+<h2 class="headline">Hello ! Je suis Domoina Rajosoa, graphiste designer<!-- passionnée par l'image et le web -->, diplômée de l'école Axe Sud Marseille et l'école Multimédia Paris.</h2>
+
+              </div>  
+            </div>
+             
+
+<!--=========================== PORTFOLIO ================================-->
+
+
+
+
+
+            <div class="section fp-auto-height" id="section1">
+              <div class="partiedeux">
+               <!--  <p>Portfolio<p> -->
+
+
+                 <!--  <h3>Mes projets</h3> -->
+  <h4 class="mesprojets">Mes projets</h4>
+
+ <nav>
+  <ul class="button-group">
+    <li data-filter="*" class="is-checked"><a class="navsecond">All</a></li><!-- <span class="point">  .  </span>  -->
+    <li data-filter=".Branding"><a class="navsecond">Branding</a></li><!-- <span class="point">  .  </span>   -->
+    <li data-filter=".Webdesign"><a class="navsecond">Webdesign</a></li><!-- <span class="point">  .  </span>  -->
+    <li data-filter=".Multimedia"><a class="navsecond">Multimedia</a></li><!-- <span class="point">  .  </span> --> 
+    <li data-filter=".Print"><a class="navsecond">Print</a></li><!-- <span class="point">  .  </span>  -->
+    <li data-filter=".Motion"><a class="navsecond">Motion</a></li><!-- <span class="point">  .  </span>  -->
+    <li data-filter=".Packaging"><a class="navsecond">Packaging</a></li><!-- <span class="point">  .  </span>  -->
+    <li data-filter=".Illustration"><a class="navsecond">Illustration</a><!-- </li><span class="point">  .  </span>  -->
+    <li data-filter=".Photographie"><a class="navsecond">Photographie</a></li><!-- <span class="point">  . -->
+  </ul>
+</nav>
+
+
+<div id="filtre">
+        <ul class="projets">
+
+
+    <section class="range">
+
+
+          <div class="creation">
+            <li class="Multimedia"> 
+              <figure>
+                <a href="buddybaby.html">
+              <img src="IMG/buddybaby/300x300_2.png" />
+                </a>
+                    <a href="buddybaby.html">
+                      <figcaption>
+                         <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="buddybaby"/>
+                          </div>
+                          <div class="type">
+                             <h3> Buddy baby</h3>
+                             <p> Multimédia</p>
+                          </div> 
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+
+          <div class="creation">
+            <li class="Print">  
+              <figure>
+                <a href="acolor.html">
+              <img src="IMG/acolor/300x300.png" />
+                </a>
+                    <a href="acolor.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="A color"/>
+                          </div>
+                            <div class="type">
+                              <h3> A color</h3>
+                             <p> Print</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+     
+        <div class="creation">
+          <li class="Print">  
+              <figure>
+                <a href="prelude.html">
+              <img src="IMG/prelude/300x300_2.png" />
+                </a>
+                    <a href="prelude.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Au jardin de prélude" />
+                          </div>
+                            <div class="type">
+                              <h3>Au jardin de prélude</h3>
+                             <p> Print</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+             
+        <div class="creation">
+            <li class="Packaging">
+              <figure>
+                <a href="sibosibon.html">
+              <img src="IMG/sibosibon/300x300.png" />
+                </a>
+                    <a href="sibosibon.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Sibo Sibon"/>
+                          </div>
+                            <div class="type">
+                               <h3>Sibo Sibon !</h3>
+                               <p> Packaging</p>
+                           </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+  
+        <div class="creation">
+            <li class="Print">    
+              <figure>
+                <a href="croisiere.html">
+              <img src="IMG/croisiere/300x300.jpg" />
+                </a>
+                    <a href="croisiere.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Croisières musicales"/>
+                          </div>
+                            <div class="type">
+                               <h3> Les croisières musicales</h3>
+                             <p> Print</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                
+        <div class="creation">
+            <li class="Webdesign">              
+              <figure>
+                <a href="laurentgilson.html">
+              <img src="IMG/laurentgilson/300x300.png" />
+                </a>
+                    <a href="laurentgilson.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Laurent Gilson portfolio"/>
+                          </div>
+                            <div class="type">
+                            <h3>Laurent Gilson</h3>
+                               <p>Webdesign</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                 
+      <div class="creation">
+            <li class="Branding">
+              <figure>
+                <a href="ritz.html">
+              <img src="IMG/ritz/300x300.png" />
+                </a>
+                    <a href="ritz.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Ritz"/>
+                          </div>
+                            <div class="type">
+                              <h3>Ritz</h3>
+                               <p>Branding</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>          
+
+        <div class="creation">
+          <li class="Print"> 
+              <figure>
+                <a href="prohibition.html">
+              <img src="IMG/prohibition/300x300.jpg" />
+                </a>
+                    <a href="prohibition.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Adopte un mec"/>
+                          </div>
+                          <div class="type">
+                              <h3>Prohibition</h3>
+                               <p>Print</p>   
+                          </div> 
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>                 
+                           
+        <div class="creation">
+            <li class="Branding">   
+              <figure>
+                <a href="salvadordali.html">
+              <img src="IMG/salvador/300x300_2.png" />
+                </a>
+                    <a href="salvadordali.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Salvador dali"/>
+                          </div>
+                            <div class="type">
+                              <h3>Salvador Dali</h3>
+                               <p> Branding</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                    
+        <div class="creation">
+          <li class="Multimedia"> 
+              <figure>
+                <a href="adopteunmec.html">
+              <img src="IMG/adopte/300x300.png" />
+                </a>
+                    <a href="adopteunmec.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Adopte un mec"/>
+                          </div>
+                          <div class="type">
+                              <h3>Adopte un mec</h3>
+                               <p>  Multimédia</p>   
+                          </div> 
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>          
+    
+        <div class="creation">
+            <li class="Illustration"> 
+              <figure>
+                <a href="conteneursespoir.html">
+              <img src="IMG/conteneurs/300x300_2.png" />
+                </a>
+                    <a href="conteneursespoir.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Conteneurs d'espoir"/>
+                          </div>
+                          <div class="type">
+                              <h3>Conteneurs d'espoir</h3>
+                               <p> Illustration</p>                             
+                          </div> 
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+          </div>
+        
+        <div class="creation">
+            <li class="Motion"> 
+              <figure>
+                <a href="britney.html">
+              <img src="IMG/britney/300x300.jpg" />
+                </a>
+                    <a href="britney.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Britney Spears-Toxic motion"/>
+                          </div>
+                            <div class="type">
+                                <h3>Britney Spears "toxic"</h3>
+                               <p> Motion</p>                              
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+
+
+             <div class="creation">
+          <li class="Print">  
+              <figure>
+                <a href="electricloading.html">
+              <img src="IMG/electricloading/300x300.jpg" />
+                </a>
+                    <a href="electricloading.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Electric Loading" />
+                          </div>
+                            <div class="type">
+                              <h3>Electric Loading</h3>
+                             <p> Print</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+            
+  <div class="creation">
+            <li class="Motion">  
+              <figure>
+                <a href="feast.html">
+              <img src="IMG/feast/300x300.jpg" />
+                </a>
+                    <a href="feast.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Cirva"/>
+                          </div>
+                            <div class="type">
+                                <h3>Feast</h3>
+                               <p>Motion</p>                                                       
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li> </li> 
+            </div>
+                 
+      <div class="creation">
+            <li class="Print">  
+              <figure>
+                <a href="cirque.html">
+              <img src="IMG/cirque/300x300.jpg" />
+                </a>
+                    <a href="cirque.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Cirque Contemporain"/>
+                          </div>
+                            <div class="type">
+                                <h3>Cirque contemporain</h3>
+                               <p> Print</p>                               
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+                        
+          <div class="creation">
+            <li class="Webdesign">  
+              <figure>
+                <a href="hommell.html">
+                 <img src="IMG/hommell/300x300.jpg" />
+                   </a>
+                    <a href="hommell.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Hommell" />
+                          </div>
+                          <div class="type">
+                                <h3>Hommell</h3>
+                               <p>Webdesign</p>  
+                          </div> 
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+
+<div class="creation">
+          <li class="Webdesign"> 
+              <figure>
+                <a href="pandora.html">
+              <img src="IMG/pandora/300x300.jpg" />
+                </a>
+                    <a href="pandora.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Pandora"/>
+                          </div>
+                          <div class="type">
+                              <h3>Pandora</h3>
+                               <p>  Webdesign</p>   
+                          </div> 
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>                         
+                   
+         <div class="creation">
+          <li class="Multimedia"> 
+              <figure>
+                <a href="clairefontaine.html">
+              <img src="IMG/clairefontaine/300x300.jpg" />
+                </a>
+                    <a href="clairefontaine.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Clairefontaine"/>
+                          </div>
+                          <div class="type">
+                                <h3>Clairefontaine</h3>
+                               <p>Multimédia</p>  
+                          </div> 
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                    
+        <div class="creation">
+          <li class="Print">  
+              <figure>
+                <a href="architecture.html">
+                  
+              <img src="IMG/architecture/300x300.jpg" />
+                </a>
+                    <a href="architecture.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Jeudi de l'architecture"/>
+                          </div>
+                            <div class="type">
+                                <h3>Jeudi de l'architecture</h3>
+                               <p> Print</p> 
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                    
+        <div class="creation">
+            <li class="Packaging">
+              <figure>
+                <a href="faconnable.html">
+                 <img src="IMG/faconnable/300x300.jpg" />
+                  </a>
+                    <a href="faconnable.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Façonnable" />
+                          </div>
+                            <div class="type">
+                                <h3>Façonnable</h3>
+                               <p> Packaging</p>                                
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                      
+          <div class="creation">
+            <li class="Print">    
+              <figure>
+                <a href="dixmots.html">
+                  <img src="IMG/dixmots/300x300.png" />
+                    </a>
+                      <a href="dixmots.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img class="imgs" src="IMG/IMG/survol.png" alt="Dis moi dix mots" />
+                          </div>
+                            <div class="type">
+                                <h3> Dis moi dix mots</h3>
+                               <p>Print</p>                                 
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                   
+          <div class="creation">
+            <li class="Webdesign">    
+              <figure>
+                <a href="remadeinfrance.html">
+                  <img src="IMG/remadeinfrance/300x300.jpg" />
+                   </a>
+                    <a href="remadeinfrance.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" />
+                          </div>
+                            <div class="type">
+                                <h3> Remadeinfrance</h3>
+                               <p>Webdesign</p>                                 
+                            </div>    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                 
+        <div class="creation">
+            <li class="Webdesign">              
+              <figure>
+                <a href="dons.html">
+              <img src="IMG/dons/300x300.jpg" />
+                </a>
+                    <a href="dons.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img class="picture" src="IMG/IMG/survol.png" alt="Dons en ligne"/>
+                          </div>
+                            <div class="type">
+                                <h3>Dons en ligne</h3>
+                               <p>Webdesign</p>  
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                   
+        <div class="creation">
+            <li class="Webdesign">              
+              <figure>
+                <a href="digitick.html">
+              <img src="IMG/digitick/300x300.jpg" />
+                </a>
+                    <a href="digitick.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Digitick"/>
+                          </div>
+                            <div class="type">
+                                <h3> Digitick</h3>
+                               <p>Webdesign</p>                               
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                     
+<!--         <div class="creation">
+            <li class="Branding">             
+              <figure>
+                <a href="pikorette.html">
+              <img src="IMG/pikorette/300x300.jpg" />
+                </a>
+                    <a href="pikorette.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Ma pikorette"/>
+                          </div>
+                            <div class="type">
+                                <h3> Pikorette</h3>
+                               <p>Branding</p>                              
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div> -->
+                     
+          <div class="creation">
+            <li class="Print">  
+              <figure>
+                <a href="cirva.html">
+              <img src="IMG/cirva/300x300.jpg" />
+                </a>
+                    <a href="cirva.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Cirva"/>
+                          </div>
+                            <div class="type">
+                                <h3> Cirva</h3>
+                               <p>Print</p>                                                       
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li> </li> 
+            </div>
+                     
+        <div class="creation">
+            <li class="Illustration"> 
+              <figure>
+                <a href="dessins.html">
+              <img src="IMG/dessin/300x300.jpg" />
+                </a>
+                    <a href="dessins.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Mes sublimes dessins xD" />
+                          </div>
+                          <div class="type">
+                                <h3> Sélections de dessins</h3>
+                               <p>Illustration</p>  
+                          </div>
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+           </div>
+
+ <div class="creation">
+          <li class="Print">  
+              <figure>
+                <a href="ninjaacademy.html">
+              <img src="IMG/ninjaacademy/300x300.jpg" />
+                </a>
+                    <a href="ninjaacademy.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Ninja Academyy" />
+                          </div>
+                            <div class="type">
+                              <h3>Ninja Academy</h3>
+                             <p> Print</p>
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+
+<div class="creation">
+            <li class="Print">  
+              <figure>
+                <a href="friedland.html">
+              <img src="IMG/friedland/300x300.jpg" />
+                </a>
+                    <a href="friedland.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="friedland"/>
+                          </div>
+                            <div class="type">
+                                <h3> Friedland</h3>
+                               <p>Print</p>                                                       
+                            </div>                    
+                      </figcaption>
+                    </a>
+                </figure>
+              </li> </li> 
+            </div>           
+
+        <div class="creation">
+            <li class="Print"> 
+              <figure>
+                <a href="decogarden.html">
+              <img src="IMG/decogarden/300x300.jpg" />
+                </a>
+                    <a href="decogarden.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Photographies"/>
+                          </div>
+                          <div class="type">
+                                <h3>Deco Garden</h3>
+                               <p>Print</p>  
+                          </div>
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                            
+        <div class="creation">
+            <li class="Photographie"> 
+              <figure>
+                <a href="photographie.html">
+              <img src="IMG/photographie/300x300.jpg" />
+                </a>
+                    <a href="photographie.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Photographies"/>
+                          </div>
+                          <div class="type">
+                                <h3> Sélection de photos</h3>
+                               <p>Photographie</p>  
+                          </div>
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+            </div>
+                   
+        <div class="creation">
+            <li class="Webdesign">  
+              <figure>
+                <a href="crossknowledge.html">
+              <img src="IMG/crossknowledge/300x300.jpg" />
+                </a>
+                    <a href="crossknowledge.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Crossknowledge"/>
+                          </div>
+                          <div class="type">
+                                <h3> Crossknowledge</h3>
+                               <p>Webdesign</p>                              
+                          </div>
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+           </div>
+                      
+        <div class="creation">
+            <li class="Print">  
+              <figure>
+                <a href="viequotidienne.html">
+              <img src="IMG/viequotidienne/300x300.jpg" />
+                </a>
+                    <a href="viequotidienne.html">
+                      <figcaption>
+                          <div class="survol">
+                            <img src="IMG/IMG/survol.png" alt="Vie quotidienne"/>
+                          </div>
+                          <div class="type">
+                                <h3>Vie quotidienne</h3>
+                               <p>Print</p>                             
+                          </div>
+                      </figcaption>
+                    </a>
+                </figure>
+              </li>
+          </div>
+        
+
+
+
+
+                            </section>
+                        </ul>
+                      </div>
+
+
+
+
+
+                </div>
+             </div>
+
+
+
+
+
+
+
+
+
+
+<!--=========================== A PROPOS  / SLIDE 1 ================================-->
+       
+        <div class="section fp-auto-height" id="section2">  
+                    <div class="partietrois">
+  
+                          <div class="slide" id="slide1">
+                            <div class="apropos1">
+                              <h5 class="apropos">À propos<h5>
+                                <p class="telechargercv">Avant de continuer, je vous invite à télécharger mon <a href="IMG/IMG/CV.pdf">CV</a> et bien le conserver !</p>
+                           </div> 
+                          </div>
+
+  <div class="slide" id="slide2">
+                           <div class="apropos2">
+                              <h5 class="apropos">À propos<h5>
+                                <p class="moncv"> Je suis une graphiste designer passionnée basée sur Marseille. Après quelques expériences en agence et essentiellement en freelance, mon intêret pour l'évolution du web et du digital n'a fait qu'accroître et c'est pourquoi, j'effectue actuellement une formation de développeur, intégrateur web. <br /><br /> Avec mon envie d'apprendre et ma soif d'expérience car pour moi les compétences ne font pas tout, je suis à la recherche aujourd'hui de projets que ce soit en poste ou en freelance pour continuer d'évoluer et exprimer l'étendue de ma créativité. Alors n'hésitez surtout pas à me <a href="index.html#contact">contacter</a > !</p> <!-- <br /><br />
+                                 Je vous invite d'ailleurs à télécharger mon <a href="IMG/IMG/CV.pdf">CV</a> et bien le conserver ! </p> -->
+                           </div> 
+                          </div>
+
+
+  <!--=========================== A PROPOS  / SLIDE 1 ================================-->                             
+                
+                      <!--          <div class="slide" id="slide2">
+                                  <h5 class="titreslide3">Références<h5>
+                              </div> -->
+
+              </div>
+         </div>
+             
+
+
+
+<!--=========================== COMPETENCES SLIDE 1 ================================-->
+
+                  <div class="section fp-auto-height" id="section3">  
+                     <div class="partiequatre">
+                        
+                         <div class="slide" id="slide1">
+                          <h5 class="mescompetences">Compétences<h5>
+                                <div class="competences2">
+                                    
+                                      <div class="ecrans">
+                                        <ul>
+                                          <li><img src="IMG/IMG/ecrans.png" alt="Ecrans Web"/></li>
+                                          <li><p><span class="point">. </span>Webdesign</p></li>
+                                          <li><p><span class="point">. </span>Newsletters (intégration & conception)</p></li>
+                                          <li><p><span class="point">. </span>HTML & CSS</p></li>
+                                          <li><p><span class="point">. </span>Motion design</p></li>
+                                          <li><p><span class="point">. </span>Campagne display</p></li>
+                                        </ul>
+                                      </div>
+                                        
+                                      <div class="impressions">  
+                                        <ul>
+                                            <li><img src="IMG/IMG/print.png" alt="Print"/></li>
+                                            <li><p><span class="point">. </span>Catalogue, dépliant, flyer...</p></li>
+                                            <li><p><span class="point">. </span>Packaging</p></li>
+                                            <li><p><span class="point">. </span>Théâtralisation</p></li>
+                                            <li><p><span class="point">. </span>Papeterie</p></li>
+                                            <li><p><span class="point">. </span>Publicité</p></li>
+                                            <li><p><span class="point">. </span>Charte graphique</p></li>
+                                          </ul>
+                                      </div>
+                                        
+                                      <div class="reflexions"> 
+                                        <ul>
+                                          <li><img src="IMG/IMG/reflexion.png" alt="Reflexions"/></li> 
+                                          <li><p><span class="point">. </span>Identification des besoins</p></li>
+                                          <li><p><span class="point">. </span>Conception, design</p></li>
+                                          <li><p><span class="point">. </span>Identité visuelle</p></li>
+                                          <li><p><span class="point">. </span>Logotype</p></li>
+                                        </ul>
+                                      </div>
+
+                                      <div class="illu"> 
+                                        <ul>
+                                          <li><img src="IMG/IMG/illustration.png" alt="Illustrations"/></li>
+                                          <li><p><span class="point">. </span>Roughs</p></li>
+                                          <li><p><span class="point">. </span>Story board</p></li>
+                                          <li><p><span class="point">. </span>Illustration traditionnelle</p></li>
+                                          <li><p><span class="point">. </span>Illustration vectorielle</p></li>
+                                          <li><p><span class="point">. </span>Illustration numérique</p></li>
+                                        </ul>
+                                      </div>
+
+                                      </div>
+                               </div>
+
+
+
+
+
+<!--=========================== COMPETENCES SLIDE 2 ================================-->
+
+                         <div class="slide" id="slide2">
+                                       <div class="container3"> 
+                                      <h5 class="logi">Logiciels & langages web<h5>
+
+                                        <ul>
+                                          <li><img src="IMG/IMG/photoshop.png" alt="Photoshop"/></li>
+                                          <li><img src="IMG/IMG/illustrator.png" alt="Illustrator"/></li>
+                                          <li><img src="IMG/IMG/indesign.png" alt="Indesign"/></li>
+                                          <li><img src="IMG/IMG/animate.png" alt="Animate"/></li>
+                                          <li><img src="IMG/IMG/aftereffect.png" alt="After effect"/></li>
+                                          <li><img src="IMG/IMG/html.png" alt="HTML"/></li>
+                                          <li><img src="IMG/IMG/css.png" alt="CSS"/></li>
+                                        </ul>
+                                      </div>
+                                    </div >
+ 
+
+                    </div>
+                </div>
+
+
+
+
+<!--=========================== CONTACT ================================-->
+
+          <div class="section fp-auto-height" id="section4">
+            <div class="partiecinq">
+              
+
+               <h5 class="titrecontact">Contact</h5>
+                <div class="contact">
+                  <p>
+                      <strong>Travaillons ensemble</strong> ! Je serai ravie de participer à vos projets et discuter d'une <strong>future collaboration</strong>.
+                      <br />
+                     
+                  <p>
+                </div>
+
+
+
+
+
+      <div class="infocontact">
+          <div class="telmail">
+           <ul>
+              <li><img src="IMG/IMG/telephone.png" alt="telephone" class="tel"></li>
+              <li>+33 6 74 99 36 46</li>  
+            </ul>
+            <ul>          
+              <li class="espace"><a href="mailto:r.domoina@laposte.net"><img src="IMG/IMG/email.png" alt="email de contact"></a></li>
+              <li><a href="mailto:r.domoina@laposte.net">r.domoina@laposte.net</a></li>
+           </ul> 
+           </div>
+    </div> 
+
+
+<!-- <form id="myForm" method="post" action="" >
+  <br>Nom<br><input name="text1" id="text1" type="text" >
+  <br>Email<br><input name="email2" id="email2" type="email" >
+  <br>Message<br><textarea name="textarea3" id="textarea3" cols="18" rows="5" ></textarea>
+  <br><input name="submit4" type="submit" value="Valider" >
+</form> -->
+
+
+
+
+
+
+
+
+
+      <div class="mlrs">
+
+         <div class="rs">
+           <ul>
+              <li><a href="#">Linkedin</a></li>
+              <li class="rsespace"><a href="#">Dribble</a></li>
+              <li class="rsespace"><a href="#">Instagram</a></li>
+             </ul> 
+         </div><!--
+          --><div class="copyright">
+            <p>© COPYRIGHT DOMOINA RAJOSOA    <a href="mentionslegales.html">Mentions légales</a></p>
+          </div>
+
+
+    </div>        
+
+
+
+            </div>
+         </div>
+
+
+<!--=========================== DIV FULL PAGE FINAL ================================-->         
+ 
+ </div>  
+ 
+
+
+<!--=========================== SCRIPT ================================-->
+
+
+
+
+
+
+ 
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    
+   
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="JS/jquery-1.11.1.min.js"><\/script>');
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+
+
+<!--APPEL menu apparition -->
+<script src="JS/menubar.js"></script> 
+<script type="text/javascript"> $(document).ready(function(){$('a.menu').menuBar();});</script>
+
+
+
+
+<!-- SCROLL INTERNE -->
+<!-- liaison vers  un js pour utliser le pluging slim scroll pour scroller à l'intérieur des pages -->
+<script type="text/javascript" src="JS/scrolloverflow.js"></script>
+
+
+
+
+<!-- APPEL FULL PAGE -->
+ <!-- liaison vers  un js pour utliser mon pluging -->
+<script type="text/javascript" src="JS/jquery.fullPage.js"></script>
+
+
+
+<!-- liaison vers mon javascript / jquery -->
+<script type="text/javascript" src="JS/fullpage.js"></script>
+
+
+
+
+  <!-- ________________________________________________________ ISOTOPE ________________________________________________________ 
+ -->
+
+
+
+
+<!-- liaison vers  un js pour utliser un pluging -->
+<script type="text/javascript" src="JS/isotope.pkgd.min.js"></script>
+
+
+
+<!-- liaison vers mon javascript / jquery -->
+<script type="text/javascript" src="JS/script2.js"></script>
+
+
+<!--=========================== SCROLLREVEAL ================================-->
+
+
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="JS/appreveal.js"></script>
+
+
+<!--=========================== EMPECHER CHEVAUCHEMENT ================================-->
+
+
+
+
+
+
+
+
+
+</body>
+</html>

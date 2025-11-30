@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domoina Rajosoa</title>
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="CSS/jquery.fullPage.css" type="text/css"/>
+<link rel="stylesheet" href="CSS/normalize.css" type="text/css"/>
+<link rel="icon" type="image/png" href="IMG/IMG/icon.png" />
+
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="JS/domoina_rajosoa.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+  canvas = document.getElementById("canvas");
+  anim_container = document.getElementById("animation_container");
+  dom_overlay_container = document.getElementById("dom_overlay_container");
+  var comp=AdobeAn.getComposition("629566FEAEFD4577B7BE571CCAC9220F");
+  var lib=comp.getLibrary();
+  var loader = new createjs.LoadQueue(false);
+  loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+  loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+  var lib=comp.getLibrary();
+  loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+  var images=comp.getImages();  
+  if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }  
+}
+function handleComplete(evt,comp) {
+  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+  var lib=comp.getLibrary();
+  var ss=comp.getSpriteSheet();
+  var queue = evt.target;
+  var ssMetadata = lib.ssMetadata;
+  for(i=0; i<ssMetadata.length; i++) {
+    ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+  }
+  exportRoot = new lib.Sansnom1();
+  stage = new lib.Stage(canvas);  
+  //Registers the "tick" event listener.
+  fnStartAnimation = function() {
+    stage.addChild(exportRoot);
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
+  }     
+  //Code to support hidpi screens and responsive scaling.
+  AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]); 
+  AdobeAn.compositionLoaded(lib.properties.id);
+  fnStartAnimation();
+}
+</script>
+
+</head>
+
+<body onload="init();" >
+  <nav class="sidebar"> 
+      <a class="menu cursor" title="Menu">
+          <div class="menu-trigger">
+              <div class="bar-container">
+                  <div class="bar menu-bar-top"></div>
+                  <div class="bar menu-bar-mid"></div>
+                  <div class="bar menu-bar-bottom"></div>
+              </div>
+          </div>
+      </a>     
+      	<ul id="menu">
+      		<li data-menuanchor="home"><span class="homemenu"><a href="index.html#home" class="underline">Home</span></a></li>
+          	<li data-menuanchor="portfolio"><a href="index.html#portfolio" class="underline">Portfolio</a></li>
+            	<li data-menuanchor="apropos"><a href="index.html#apropos" class="underline">À propos</a></li>
+                <li data-menuanchor="competences"><a href="index.html#competences" class="underline">Compétences</a></li>
+            	<li data-menuanchor="contact"><a href="index.html#contact" class="underline">Contact</a></li>
+          </ul>
+  </nav>
+    <div id="fade-wrapper"></div>
+    
+<a href="index.html#home"><h1 id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:60px; height:60px" >
+    <canvas id="canvas" width="60" height="60" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:60px; height:60px; position: absolute; left: 0px; top: 0px; display: block;">
+    </div>
+  </h1></a>
+<!--______________________________________________________ FIN Menu ______________________________________________________ -->
+
+
+
+
+<div class="fondgris">
+	
+
+	<section class="mentionslegales">
+
+
+
+			
+ 			<h6>
+<!-- 				 <span class="pointille3">.</span> 
+ -->					<span class ="ML">Mentions légales</span>
+<!-- 				 <span class="pointille3">.</span> 
+ -->			</h6>
+<!-- 			 <span class="pointille3">......................................................................</span><br /><br /><br />
+ --><br />	<br />		
+
+		<br />
+
+			<h6>
+				<span class="pointille3">.</span>
+					Présentation
+				<span class="pointille3">.</span>
+			</h6>		
+				<p>
+				<strong>Le site web www.r-domoina.com est la propriété de Rajosoa Domoina</strong><br />
+				<strong>Directeur de la publication du site web</strong> Rajosoa Domoina<br />
+				<strong>Contact</strong> r.domoina@laposte.net<br />
+				<strong>Création du site</strong> Rajosoa Domoina<br />
+				<strong>Langages web utillisés</strong> html/css/jquery/js<br />
+				<strong>Date de mise en ligne</strong> 19 juin 2019<br />
+				</p>
+
+	<br /><br />
+
+
+			<h6>
+				<span class="pointille3">.</span>
+				Hébergement
+				<span class="pointille3">.</span>
+			</h6>
+				<p>	
+				1&1 Internet SARL<br />
+				7, place de la Gare<br />
+				BP 70109<br />
+				57201 Sarreguemines Cedex<br />
+				</p>
+
+	<br /><br />
+
+
+			<h6>
+				<span class="pointille3">.</span>
+				Conditions d'accès
+				<span class="pointille3">.</span>
+			</h6> 
+			<p>
+			L’utilisateur du site www.r-domoina.com reconnaît disposer de la compétence et des moyens nécessaires pour accéder et utiliser ce site. <br />
+			L’accès au site et son utilisation nécessitent de disposer de la configuration minimale suivante : tout ordinateur doté d’un navigateur Google Chrome 51.0.2704.103 ou supérieur, ou Safari 9.1.1 ou supérieur, ou Firefox 46.0.1 ou supérieur, ou tout navigateur respectant les normes W3C. Par ailleurs, avant toute utilisation du site, l’utilisateur reconnaît s’être assuré que le navigateur utilisé permet un accès sécurisé au site.<br />
+			L’accès au site est possible 24 h sur 24 et 7 jours sur 7, sous réserve de la survenance d’un cas de force majeure (tel que reconnu par la jurisprudence des tribunaux français et communautaires), des pannes éventuelles ou de toute opération de maintenance nécessaire au bon fonctionnement du site.<br />
+			Ce site nécessite le Player « Adobe® Flash® Player » dans sa dernière version. Si vous ne l’avez pas, vous pouvez le télécharger gratuitement ici : http://get.adobe.com/fr/flashplayer
+			</p>
+
+	<br /><br />
+
+
+
+		<H6>
+			<span class="pointille3">.</span>
+			Droit de la propriété intellectuelle
+			<span class="pointille3">.</span>
+		</h6>
+			<p>
+			Le site www.r-domoina.com est protégé par les droits de propriété intellectuelle. Ainsi, la structure générale, ainsi que son contenu ; textes, graphismes, dessins, illustrations, icônes, animations, photographies sont soumis au droit d’auteur. Toute reproduction, totale ou partielle, et toute représentation du contenu substantiel de ce site, d’un ou de plusieurs de ses composants, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.<br />
+			Toute violation des droits d’auteur est sanctionnée par l’article L.335-2 du Code de la Propriété Intellectuelle, avec une peine encourue de 2 ans d’emprisonnement et de 150 000€ d’amende.<br />
+			Les utilisateurs et visiteurs du site ne peuvent mettre en place un hyperlien en direction du Site sans l’autorisation expresse et préalable de l’éditeur du site.<br />
+			</p>
+
+
+	<br /><br />
+
+
+	<h6>
+		<span class="pointille3">.</span>
+		Copyright et auteur
+		<span class="pointille3">.</span>
+	</h6>
+		<p>	
+		Création du webdesign, des graphismes, illustrations, photos et réalisation du site web par ©Domoina RAJOSOA, http://www.r-domoina.com, Tous droits réservés.
+		</p>
+
+	<br /><br />
+
+
+		<h6>
+			<span class="pointille3">.</span>
+			Conditions d'utilisations
+			<span class="pointille3">.</span>
+		</h6>
+			<p>En utilisant ce site vous vous engagez :<br />
+				A vous conformer à toutes les lois ou réglementations applicables lors de votre utilisation du site et aux conditions d’utilisation de ce site.<br />
+				A ne pas perturber ou détourner le bon fonctionnement technique du site (notamment par des procédés tels que le spamming).<br />
+				A ne pas envoyer au travers des moyens de communications de ce site, des données ou programmes informatiques qui pourraient contenir des virus informatiques, trojans, vers ou tout élément susceptible de nuire au site ou à un tiers.<br />
+				A ne pas effectuer un lien vers ce site qui pourrait avoir une action nuisible sur le référencement dans les moteurs de recherche.<br />
+			</p>
+
+
+	<br /><br />
+
+
+		<h6>
+			<span class="pointille3">.</span>
+			Vie privée
+			<span class="pointille3">.</span>
+		</h6>
+			<p>	
+			Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée en 2004, vous bénéficiez d’un droit d’accès et de rectification aux informations qui vous concernent, que vous pouvez exercer en prenant contact avec le directeur de publication du site. Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.
+	       </p>
+
+
+
+	</section>		
+</div>
+
+
+
+
+<!--=========================== SCRIPT ================================-->
+
+
+
+
+
+
+ 
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    
+   
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="JS/jquery-1.11.1.min.js"><\/script>');
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+
+
+<!--APPEL menu apparition -->
+<script src="JS/menubar.js"></script> 
+<script type="text/javascript"> $(document).ready(function(){$('a.menu').menuBar();});</script>
+
+
+
+
+<!--=========================== SCROLLREVEAL ================================-->
+
+
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="JS/appreveal.js"></script>
+
+
+
+<!--=========================== EMPERCHER CLIQUE DROIT ================================-->
+
+
+
+    <script type="text/javascript">
+    //<!--
+        document.oncontextmenu = new Function("return false");
+    //-->
+    </script>
+
+
+
+
+	
+	</body>
+</html>

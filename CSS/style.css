@@ -1,0 +1,2321 @@
+
+*{
+  padding:0;
+  margin:0;
+}
+
+
+@font-face {
+font-family: 'Antipasto_regular';
+    src: url('../TYPO/Antipasto_regular.otf');
+    src: url('../TYPO/Antipasto.ttf');
+}
+
+@font-face {
+font-family: 'Antipasto_extrabold';
+    src: url('../TYPO/Antipasto_extrabold.otf');
+}
+
+
+@font-face {
+font-family: 'Comfortaa-Bold';
+    src: url('../TYPO/Comfortaa-Bold.ttf');
+}
+
+@font-face {
+font-family: 'Comfortaa_Regular';
+    src: url('../TYPO/Comfortaa_Regular.ttf');
+}
+
+
+@font-face {
+font-family: 'Comfortaa_Thin.ttf';
+    src: url('../TYPO/Comfortaa_Thin.ttf');
+}
+
+@font-face {
+font-family: 'DroidSerif-Regular';
+    src: url('../TYPO/DroidSerif-Regular.ttf');
+}
+
+@font-face {
+font-family: 'DroidSerif-Bold';
+    src: url('../TYPO/DroidSerif-Bold.ttf');
+}
+
+@font-face {
+font-family: 'DroidSerif-Italic';
+    src: url('../TYPO/DroidSerif-Italic.ttf');
+}
+
+@font-face {
+font-family: 'DroidSerif-BoldItalic';
+    src: url('../TYPO/DroidSerif-BoldItalic.ttf');
+}
+
+@font-face {
+font-family: 'ButterUnsalted';
+    src: url('../TYPO/ButterUnsalted.ttf');
+}
+
+
+
+
+@font-face {
+font-family: 'ryantPro-LightAlternate';
+    src: url('../TYPO/BryantPro-LightAlternate.otf');
+}
+
+@font-face {
+font-family: 'BryantPro-LightItalic';
+    src: url('../TYPO/BryantPro-LightItalic.otf');
+}
+
+@font-face {
+font-family: 'BryantPro-Medium';
+    src: url('../TYPO/BryantPro-Medium.otf');
+}
+
+@font-face {
+font-family: 'BryantPro-MediumAlternate';
+    src: url('../TYPO/BryantPro-MediumAlternate.otf');
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+font-family: 'BryantPro-Regular';
+    src: url('../TYPO/BryantPro-Regular.otf');
+}
+
+@font-face {
+font-family: 'BryantPro-RegularAlternate';
+    src: url('../TYPO/BryantPro-RegularAlternate.otf');
+}
+
+@font-face {
+font-family: 'BryantPro-RegularItalic';
+    src: url('../TYPO/BryantPro-RegularItalic.otf');
+}
+
+@font-face {
+font-family: 'BryantPro-Bold';
+    src: url('../TYPO/BryantPro-Bold.otf');
+}
+
+@font-face {
+font-family: 'DroidSerif-BoldItalic';
+    src: url('../TYPO/DroidSerif-BoldItalic.ttf');
+}
+
+@font-face {
+font-family: 'BryantPro-BoldAlternate';
+    src: url('../TYPO/BryantPro-BoldAlternate.otf');
+}
+
+
+
+
+@font-face {
+font-family: 'BryantPro-BoldItalic';
+    src: url('../TYPO/BryantPro-BoldItalic.otf');
+}
+
+
+
+
+
+/*==================================================================================
+                                   4 SECTIONS TAILLE & COULEUR
+==================================================================================*/
+
+
+ 
+
+/*#section0
+{
+  width: 100%;
+  margin: auto;
+    background-image: url(../IMG/IMG/test.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+*/
+
+
+.partiedeux
+{
+  height: 100%;
+  padding-bottom: 200px;
+
+}
+
+.partietrois 
+{
+ 
+  height: 100%;
+
+
+}
+
+
+
+
+.partiequatre
+{
+  height: 100%;
+}
+
+
+.partiecinq
+{
+  height: 100%;
+}
+
+
+
+
+
+#section2 #slide2{
+    background-color: #fcfcfc;
+}
+
+/*==================================================================================
+                                  LOGO
+==================================================================================*/
+
+
+
+
+#animation_container
+{
+  
+    position: fixed;
+    z-index: 3;
+     margin-top:48px;    
+}   
+
+
+   
+
+
+/*==================================================================================
+                                   SIDEBAR
+==================================================================================*/
+/*#section0
+{
+    background: -webkit-gradient(linear, top left, bottom left, from(#ffffff), to(#fc7e7e));
+    background: -webkit-linear-gradient(#ffffff, #fc7e7e);
+    background: linear-gradient(#ffffff,#fc7e7e);
+}*/
+
+
+
+a.cursor {
+    cursor: pointer;
+}
+
+#fade-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 5000;
+}
+
+
+
+#menu
+{
+    padding-top: 80px;
+    font-size: 40px; /*50px ancienne taille ou 1.8em ?? lequel choisir */
+    font-family: 'DroidSerif-Regular', serif;
+    /*text-transform: uppercase;*/
+    text-decoration: none;
+    text-align: center;
+}
+
+#menu ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#menu li
+{
+    color: #ffffff;
+    margin-bottom: 30px;
+    list-style:none;
+
+}
+
+nav.sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 9999;
+}
+
+
+
+
+#menu a
+{
+    color: #00A597;
+    text-decoration: none;
+}
+
+
+#menu li.active a 
+{
+border-bottom: 3px solid #00A597;
+}
+
+
+.underline 
+{
+  position: relative;
+  color: #00A597;
+}
+
+.underline:after 
+{
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  background: #00A597;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+.underline:hover 
+{
+  color: #00A597;
+}
+
+.underline:hover:after 
+{
+  width: 100%;
+}
+
+
+
+
+/********** Nav Trigger **********/
+
+.menu-trigger {
+    position: fixed;
+    top: 20px;
+    width: 40px;
+    height: 20px;
+    line-height: 40px;
+}
+
+.bar-container {
+    margin-top: 3px;
+    height: 13px;
+}
+
+.bar {
+    position: absolute;
+    height: 3px;
+    width: 90%;
+    outline: 1px solid transparent;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.menu-bar-top {
+    top: 3px;
+    left: 2px;
+}
+
+.menu-bar-mid {
+    top: 8px;
+    left: 2px;
+}
+
+.menu-bar-bottom {
+    top: 13px;
+    left: 2px;
+}
+
+
+
+
+
+
+
+
+
+/*==================================================================================
+                                    HOME
+==================================================================================*/
+
+
+/*.partieun h2
+{
+  font-family: 'DroidSerif-Regular', serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 113px;
+  color: #00A597;
+}
+
+.partieun h3
+{
+  font-family: 'BryantPro-Medium', sans-serif;
+  color: #e2b8be;
+  letter-spacing : 1px;
+
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  font-size: 1em;
+
+
+}*/
+
+.partieun h2
+{
+  font-family: 'DroidSerif-Regular', serif;
+  font-size: 1.6em;
+  line-height: 60px;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 230px;
+  margin-bottom: 200px;
+  color: #00A597;
+  font-weight: normal;
+}
+
+
+
+
+
+/*==================================================================================
+                                    PORTFOLIO
+==================================================================================*/
+
+
+
+
+/*h3
+{
+  padding-top:200px;
+  font-family: 'DroidSerif-Regular', serif;
+  font-size: 2em;
+}*/
+
+
+.partiedeux .mesprojets
+{
+  font-family: 'BryantPro-Medium', serif;
+  text-align: center;
+  margin-top: 190px;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: #00A597;
+/*  text-transform: uppercase;*/
+  padding-bottom: 5px;
+
+}
+
+.button-group
+{ 
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding-bottom:35px;
+
+
+}
+
+.button-group li
+{
+  display: inline-block;
+  margin-right: 1.2em;
+  margin-top: 0.5em; 
+}
+
+
+.button-group a
+{
+  font-family: 'DroidSerif-Regular', serif;
+  color: #00A597;
+  line-height: 30px;
+  font-size: 1.1em;
+  text-decoration: none;
+  cursor: pointer;
+  /*text-transform: uppercase;*/
+
+}
+
+
+.button-group a:hover
+{
+/*  font-family: 'Comfortaa_bold', 'Antipasto', sans-serif;*/
+  font-family:'DroidSerif-Regular', serif;
+  color: #e2b8be;    /*#   beige : #FBDFDD  -   turquoise : #00A597   #e2b8be : b.foncé  -  #00A597  : b.clair*/ 
+/*  text-transform: uppercase;*/
+  font-style: normal;
+/*  font-size: 1.3em;*/
+  letter-spacing: 0.0em;
+/*  background-color: #FBDFDD;*/
+  text-decoration: none;
+/*    border-bottom: 2px #00A597  solid; 
+  padding-bottom: 2px;
+}*/
+}
+
+ 
+
+
+.is-checked
+{
+  border-bottom: 3px #e2b8be  solid;  
+  padding-bottom:1px;
+/*  border:2px #e2b8be  solid;
+  padding: 3px 5px 3px 5px;*/
+}
+
+
+
+
+.point
+{
+  font-size: 2em;
+  font-family: 'Comfortaa-Bold', 'Antipasto', sans-serif;
+  color: #ffffff;        /*beige foncé : #e2b8be;*/
+}
+
+
+.projets img
+{
+  width: 300px;
+  height: 300px;
+}
+
+
+
+.partiedeux figcaption
+{
+ 
+  position: absolute;
+  opacity: 0;
+  top: 5.2%;
+  left: 40px;
+}
+
+.partiedeux figcaption:hover
+{
+  -webkit-transition-property: background-color opacity 1s;
+  -moz-transition-property: background-color opacity 1s;
+  -o-transition-property: background-color opacity  1s;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  opacity: 1;
+  /*background-color: #FBDFDD;*/ /*#FBDFDD*/
+
+}
+
+
+.partiedeux p
+{
+  font-family:'DroidSerif-Regular', serif ;
+  text-transform: normal;
+  font-size: 0.9em;
+}
+
+
+.partiedeux h3
+{
+  font-family:'BryantPro-Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+
+}
+
+
+.type
+{
+  position: absolute;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto; 
+  padding-top: 210px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -11px;
+  top: 4em;
+  opacity: 0;
+  line-height: 1.4em;
+  color: #00A597;
+  text-align: center;
+}
+
+
+
+.type:hover
+{
+  top :-2em; 
+  color: #00A597;
+  opacity: 1;
+  -webkit-transition-property: width 3s;
+  -moz-transition-property: width 3s;
+  -o-transition-property: width  3s;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+}
+
+
+
+
+
+/*.type 
+{
+  position: absolute;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;  
+  padding-top: 10px ;
+  padding-bottom: 150px;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  top: 0.1em;
+  left: -0.0em;
+  font-family: 'BryantPro-Regular', serif;
+  font-style: normal;
+  text-transform: none;
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 2em; 
+  color: #00A597;
+}
+
+.type:hover
+{
+  position: absolute;
+  top: 1.4em;
+  font-family: 'DroidSerif', serif;
+  font-style: normal;
+  text-transform: none;
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 2em;
+  color: #00A597;
+  -webkit-transition-property: width 3s;
+  -moz-transition-property: width 3s;
+  -o-transition-property: width  3s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================================================
+                                    A PROPOS SLIDE 1
+==================================================================================*/
+
+
+
+
+.apropos2
+{
+  padding-bottom: 70px;
+}
+
+.apropos
+{
+
+  font-weight: normal;
+  padding-top: 130px;
+  color: #00A597; 
+  text-align: center;
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 2.5em;
+  padding-bottom: 30px;
+
+
+}
+
+
+
+
+.apropos1 p
+{
+  font-weight: normal;
+  color: #00A597; 
+  text-align: center;
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 3em;
+  padding-bottom: 30px;
+}
+
+
+
+.apropos1 a
+{
+  color: #00A597; 
+  text-decoration: none;
+  border-bottom:3px #00A597 solid;
+}
+
+.apropos1 a:hover
+{
+  font-size: 1.1em;
+}
+
+.apropos2 p
+{
+  font-size: 1.4em;
+  font-family: "DroidSerif-Italic", serif;
+  color: #00A597; 
+  text-align: left; 
+  line-height: 31px;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+
+
+
+.apropos2 a
+{
+  color: #00A597; 
+  text-decoration: none;
+  border-bottom:3px #e2b8be solid;
+}
+
+   
+.apropos2 a:hover
+{
+ 
+    color: #e2b8be;  /*beige foncé : #e2b8be; beige clair : #FBDFDD; turquoise foncé : #00A597*/
+
+}
+
+
+.telechargercv
+      {
+        text-align: center;
+        line-height: 55px;
+      }
+
+
+/*==================================================================================
+                                    Compétences SLIDE 1
+==================================================================================*/
+
+.competences2
+{
+  text-align: center;
+   padding-bottom: 70px;
+}
+
+
+.mescompetences
+  {  
+  padding-top: 130px;
+  font-weight: normal;
+  color: #00A597; 
+  text-align: center;
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 2.5em;
+}
+
+
+
+
+.ecrans img, .impressions img, .reflexions img, .illu img
+{
+  width: 60px;
+  padding-left: 10px;
+}
+
+
+.ecrans li, .impressions li, .reflexions li, .illu li
+{
+  list-style: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #00A597; 
+  text-align: left;
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 1.2em; 
+  letter-spacing: 0.7px;
+   line-height: 22px;
+
+/*  list-style: none;
+  font-size: 1.3em;
+  line-height: 25px;
+  color: #00A597; 
+  text-align: left;
+  font-family: "DroidSerif-Regular", serif;
+  font-weight: normal;*/
+
+}
+.ecrans, .impressions, .reflexions, .illu
+{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+  
+}
+
+
+
+.point
+{
+  font-family: "BryantPro-Bold", serif;
+  color:#e2b8be;
+  font-size:1.5em;
+}
+
+
+/*==================================================================================
+                                    COmpétences SLIDE 2
+==================================================================================*/
+
+
+
+.logi
+{
+  padding-top: 140px;
+  font-weight: normal;
+  color: #00A597; 
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 2.5em;
+   text-align: center;
+  padding-bottom: 50px;
+
+}
+
+
+.container3 img
+{
+  width: 140px;
+}
+
+.container3 ul
+{
+  list-style: none;
+}
+
+.container3 li{
+  display: inline-block;
+
+}
+
+.container3
+{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 100px;
+}
+/*==================================================================================
+                                    CONTACT
+==================================================================================*/
+
+
+
+.titrecontact
+{
+  font-weight: normal;
+  padding-top: 100px;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  text-align: center;
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 2.5em;
+  padding-bottom: 35px;
+
+}
+
+.contact
+{
+ text-align: center;
+}
+
+.contact p
+{
+  font-weight: normal;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  font-family: "DroidSerif-Regular", sans-serif;
+  font-size: 1em;
+  /*text-transform: uppercase;*/
+
+}
+
+
+
+.infocontact
+{
+  border-top:2px solid  #ffffff;
+  border-bottom: 2px solid  #ffffff;
+  text-align: center;
+}
+
+
+.telmail ul
+{
+  display: inline-block;
+    border-top:0px solid  #ffffff;
+  border-bottom: 0px solid  #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+
+.telmail .tel
+{
+  width: 15px;
+}
+
+
+.telmail img
+{
+  width: 25px;
+}
+
+
+.telmail li
+{
+  font-weight: normal;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  font-family: "DroidSerif-Regular", sans-serif;
+  font-size: 1em;
+   display: inline;
+  /*text-transform: uppercase;*/
+}
+
+
+.telmail a
+{
+  font-weight: normal;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  font-family: "DroidSerif-Regular", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  /*text-transform: uppercase;*/
+}
+
+.espace
+{
+  margin-left: 60px;
+}
+
+.contact strong
+{
+  font-weight: normal;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  font-family: "DroidSerif-Bold", sans-serif;
+  /*text-transform: uppercase;*/
+}
+
+
+
+
+
+.mlrs
+{
+  text-align: center;
+}
+
+
+
+
+
+
+.copyright, .rs
+{
+  display: inline-block;
+  height: 0px;
+}
+
+
+.rs
+{
+  margin-bottom: 50px;
+}
+
+
+.rs li
+{
+  display: inline;
+}
+
+.rsespace
+{
+    padding-left: 40px;
+}
+
+.copyright
+{
+  padding-bottom: 50px;
+
+
+}
+
+
+.copyright p
+{
+  font-weight: normal;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  font-family: "BryantPro-Medium", serif;
+  font-size: 0.7em;
+}
+
+
+.copyright a
+{
+  font-weight: normal;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  font-family: "BryantPro-Medium", serif;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-bottom: 2px solid  #FBDFDD ;
+
+}
+
+
+.copyright a:hover
+{
+color : #FBDFDD ;
+}
+
+
+
+
+.rs a
+{
+   font-weight: normal;
+  color: #ffffff;     /*beige clair : #FBDFDD / beige foncé: #e2b8be*/
+  font-family: "BryantPro-Medium", serif;
+  font-size: 1em;
+  text-decoration: none;
+  border-bottom: 2px solid  #FBDFDD ;
+}
+
+.rs a:hover
+{
+color : #FBDFDD ;
+}
+
+
+/*==================================================================================
+                                   RESPONSIVE
+==================================================================================*/
+
+
+
+@media only screen and (min-width: 320px){
+
+
+    .projets, .projets ul
+      {
+        width: 100%;
+        min-width: 300px;
+        max-width: 300px;
+        margin : auto;
+      }
+
+
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: -40px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+
+      }
+
+       #animation_container
+      {
+          margin-left:48%;
+          
+      } 
+
+      .button-group li
+      {
+        margin-right: 0.7em;
+        margin-top: 0.5em; 
+      }
+
+      .partieun h2
+      {
+        font-size: 1.3em;
+        line-height: 40px;
+        width: 80%;
+        margin: auto;
+        margin-top: 160px;
+        margin-bottom: 250px;
+      }
+
+      .partieun
+      {
+       height: 340px;
+      }
+      
+  .telechargercv
+      {
+        width: 61%;
+        margin: auto;
+        padding-top: 100px;
+      }
+
+      .moncv
+      {
+
+        width: 70%;
+        margin: auto;
+        font-size: 2em;
+      line-height: 35px;
+      }
+  
+
+  .competences2
+    {
+      width: 70%;
+      margin: auto;
+      padding-left: 0px;
+    }
+
+  .ecrans, .impressions, .reflexions, .illu
+    {
+    width: 100%;
+    } 
+
+  .container3
+  {
+  width: 60%;
+  }   
+
+    .contact p
+    {
+    width: 90%;
+    margin: auto;
+
+    }
+
+    .copyright, .rs
+    {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+  .infocontact
+    {
+      width: 300px;
+      margin: auto;
+      margin-top:40px;
+      margin-bottom:40px; 
+      padding-top: 20px;
+      padding-bottom: 20px;      
+    }
+ 
+    .mentionslegales
+    {
+      width: 80%;
+    } 
+
+      .nomprojet
+    {
+      width: 80%;
+      padding-top: 55%;
+      left: 11%;
+      font-size: 1.5em;
+      letter-spacing: 5px;
+    }   
+
+    .precedent, .suivant
+    {
+      width: 100%;
+      margin: auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-left: 0px;
+    } 
+
+    .infosprojets
+    {
+      margin-left: 0%;
+    } 
+}
+
+
+
+
+@media only screen and (min-width: 480px){
+    .projets, .projets ul
+      {
+        width: 100%;
+        min-width: 600px;
+        max-width: 600px;
+        margin : auto;
+      }
+
+
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: -40px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+
+      }
+
+       #animation_container
+      {
+          margin-left:48%;
+          
+      } 
+
+      .partieun h2
+      {
+        font-size: 1.4em;
+        line-height: 40px;
+        width: 80%;
+        margin: auto;
+        margin-top: 180px;
+        margin-bottom: 250px;
+      }
+
+      .partieun
+      {
+       height: 100%;
+      }
+
+  .telechargercv
+      {
+        width: 70%;
+        margin: auto;
+        padding-top: 70px;
+      }
+
+      .moncv
+      {
+
+        width: 70%;
+        margin: auto;
+      line-height: 42px;
+      font-size: 1.9em;
+      }
+
+
+  .competences2
+    {
+      width: 80%;
+      margin: auto;
+      padding-left: 10px;
+    }
+
+  .ecrans, .impressions, .reflexions, .illu
+    {
+    width: 48%;
+    }       
+
+
+  .container3
+  {
+  width: 80%;
+  }  
+
+    .contact p
+    {
+    width: 70%;
+    margin: auto;
+
+    }
+
+    .copyright, .rs
+    {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+
+  .infocontact
+    {
+      width: 430px;
+      margin: auto;
+      margin-top:40px;
+      margin-bottom:40px; 
+      padding-top: 20px;
+      padding-bottom: 20px;      
+    }  
+    .mentionslegales
+    {
+      width: 70%;
+    } 
+
+      .nomprojet
+    {
+      width: 80%;
+      padding-top: 30%;
+      left: 11%;
+      font-size: 2em;
+      letter-spacing: 10px;
+    }   
+
+    .precedent, .suivant
+    {
+      width: 100%;
+      margin: auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-left: 0px;
+    } 
+
+    .infosprojets
+    {
+      margin-left: 10%;
+      margin-right: 10%;
+    } 
+}
+
+
+
+@media only screen and (min-width: 768px){
+.projets, .projets ul
+      {
+        width: 100%;
+        min-width: 600px;
+        max-width: 600px;
+        margin : auto;
+      }
+
+
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: -40px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+
+      }          
+
+/*      {
+        width: 200%;
+        min-width: 900px;
+        max-width: 900px;
+        margin : auto;
+      }
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: -38px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+      }*/
+
+      #animation_container
+      {
+        margin-left:48%;
+          
+      } 
+
+      .partieun h2
+      {
+        font-size: 1.5em;
+        line-height: 45px;
+        width: 70%;
+        margin: auto;
+        margin-top: 190px;
+        margin-bottom: 210px;
+      }
+
+      .partieun
+      {
+       height: 300px;
+      }
+
+
+  .telechargercv
+      {
+        width: 50%;
+        margin: auto;
+        padding-top: 80px;
+      }
+
+      .moncv
+      {
+
+        width: 55%;
+        margin: auto;
+        font-size: 2em;
+      line-height: 42px;
+      font-size: 1.9em;
+      }
+
+  .competences2
+    {
+      width: 80%;
+      margin: auto;
+      padding-left: 40px;
+    }
+
+  .ecrans, .impressions, .reflexions, .illu
+    {
+    width: 48%;
+    }  
+
+  .container3
+  {
+  width: 70%;
+  }    
+
+
+    .contact p
+    {
+    width: 100%;
+    margin: auto;
+
+    }
+   
+
+     .copyright, .rs
+    {
+      margin-right: 87px;
+      margin-left: 87px;
+    }
+
+  .infocontact
+    {
+      width: 790px;
+      margin: auto;
+      margin-top:40px;
+      margin-bottom:40px; 
+      padding-top: 20px;
+      padding-bottom: 20px;      
+    }
+    
+    .mentionslegales
+    {
+      width: 60%;
+    } 
+
+
+
+  .nomprojet
+    {
+      width: 60%;
+      padding-top: 30%;  /*. 16% on sait plus lol*/
+      left: 20%;
+      font-size: 2em;
+      letter-spacing: 10px;
+    } 
+
+    .precedent, .suivant
+    {
+      width: 50.1%;
+      margin: auto;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      margin-left: -5px;
+    } 
+
+
+    .infosprojets
+    {
+      margin-left: 50%;
+    } 
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 810px){
+  .nomprojet
+    {
+      width: 60%;
+      padding-top: 16%;  /*. 16% on sait plus lol*/
+      left: 20%;
+      font-size: 2em;
+      letter-spacing: 10px;
+    } 
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1024px){
+.projets, .projets ul
+      {
+        width: 200%;
+        min-width: 900px;
+        max-width: 900px;
+        margin : auto;
+      }
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: -38px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+      }
+
+
+/*      {
+        width: 100%;
+        min-width: 1200px;
+        min-width: 1200px;
+        margin : auto;
+      }
+
+
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: -40px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+
+      }*/
+
+
+          #animation_container
+      {
+          margin-left:48%;
+          
+      } 
+
+
+            .partieun h2
+      {
+        font-size: 1.6em;
+        line-height: 50px;
+        width: 70%;
+        margin: auto;
+        margin-top: 230px;
+        margin-bottom: 210px;
+      }
+
+      .partieun
+      {
+       height: 300px;
+      }
+
+  .telechargercv
+      {
+        width: 52%;
+        margin: auto;
+        padding-top: 70px;
+      }
+
+      .moncv
+      {
+
+        width: 43%;
+        margin: auto;
+      line-height: 42px;
+      font-size: 1.9em;
+      }
+
+  .competences2
+    {
+      width: 76%;
+      margin: auto;
+    }
+
+
+  .competences2
+    {
+      width: 98%;
+      margin: auto;
+      padding-left: 0px;      
+    }
+
+  .ecrans, .impressions, .reflexions, .illu
+    {
+    width: 24%;
+    }    
+
+     .container3
+    {
+    width: 100%;
+    }  
+
+    .contact p
+    {
+    width: 100%;
+    margin: auto;
+    }
+
+    .copyright, .rs
+    {
+      margin-right: 112px;
+      margin-left:112px;
+    }
+
+  .infocontact
+    {
+      width: 790px;
+      margin: auto;
+      margin-top:40px;
+      margin-bottom:40px; 
+      padding-top: 20px;
+      padding-bottom: 20px;      
+    }    
+
+    .mentionslegales
+    {
+      width: 55%;
+    }   
+
+      .nomprojet
+    {
+      width: 90%;
+      padding-top: 15%;
+      left: 5%;
+      font-size: 2.2em;
+     letter-spacing: 10px;
+    }
+
+    .precedent, .suivant
+    {
+      width: 50.1%;
+      margin: auto;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      margin-left: -5px;
+    } 
+
+        .infosprojets
+    {
+      margin-left: 50%;
+    } 
+
+}
+
+  
+
+  /*    .menu-trigger
+      {
+        margin-top: 30px;
+        margin-right: 10.5%;
+      }*/
+
+
+
+@media only screen and (min-width: 1280px){
+.projets, .projets ul
+
+      {
+        width: 100%;
+        min-width: 1200px;
+        min-width: 1200px;
+        margin : auto;
+      }
+
+
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: -40px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+
+      }
+
+
+          #animation_container
+      {
+          margin-left:48%;
+          
+      } 
+
+
+            .partieun h2
+      {
+        font-size: 1.6em;
+        line-height: 50px;
+        width: 70%;
+        margin: auto;
+        margin-top: 230px;
+        margin-bottom: 210px;
+      }
+
+      .partieun
+      {
+       height: 300px;
+      }
+
+  .telechargercv
+      {
+        width: 52%;
+        margin: auto;
+        padding-top: 70px;
+      }
+
+      .moncv
+      {
+
+        width: 43%;
+        margin: auto;
+      line-height: 42px;
+      font-size: 1.9em;
+      }
+
+  .competences2
+    {
+      width: 76%;
+      margin: auto;
+    }
+  
+
+
+  .competences2
+    {
+      width: 98%;
+      margin: auto;
+      padding-left: 0px;      
+    }
+
+  .ecrans, .impressions, .reflexions, .illu
+    {
+    width: 24%;
+    }    
+
+     .container3
+    {
+    width: 100%;
+    }  
+
+    .contact p
+    {
+    width: 100%;
+    margin: auto;
+    }
+
+    .copyright, .rs
+    {
+      margin-right: 112px;
+      margin-left:112px;
+    }
+
+  .infocontact
+    {
+      width: 790px;
+      margin: auto;
+      margin-top:40px;
+      margin-bottom:40px; 
+      padding-top: 20px;
+      padding-bottom: 20px;      
+    }    
+
+    .mentionslegales
+    {
+      width: 55%;
+    }   
+
+      .nomprojet
+    {
+      width: 90%;
+      padding-top: 15%;
+      left: 5%;
+      font-size: 2.2em;
+     letter-spacing: 10px;
+    }
+
+    .precedent, .suivant
+    {
+      width: 50.1%;
+      margin: auto;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      margin-left: -5px;
+    } 
+
+        .infosprojets
+    {
+      margin-left: 50%;
+    } 
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1600px){
+.projets, .projets ul
+      {
+        width: 94%;
+        min-width: 1600px;
+        max-width: 1600px;
+        margin : auto;
+      }
+
+
+
+      .projets img
+      {
+        width: 300px;
+        margin-bottom: -36px;
+        margin-left: 2px;
+      }
+
+      .projets li
+      {
+        display: block;
+        width: 300px;
+
+      }
+
+      #animation_container
+      {
+          margin-left:48%;
+          
+      } 
+
+      .type 
+      {
+        position: absolute;  
+        left:2em;
+
+      }
+            .partieun h2
+      {
+        font-size: 1.7em;
+        line-height: 55px;
+        width: 60%;
+        margin: auto;
+        margin-top: 240px;
+        margin-bottom: 280px;
+      }
+
+      .partieun
+      {
+       height: 320px;
+      }
+
+      .telechargercv
+      {
+        width: 50%;
+        margin: auto;
+        padding-top: 70px;
+      }
+
+      .moncv
+      {
+      font-size: 2em;
+      width: 40%;
+      margin: auto;
+      line-height: 45px;        
+      }
+
+
+  .competences2
+    {
+      width: 85%;
+      margin: auto;
+      padding-left: 40px;  
+    }
+
+  .ecrans, .impressions, .reflexions, .illu
+    {
+    width: 24%;
+    }
+
+    .container3
+    {
+    width: 100%;
+    }
+
+
+    .contact p
+    {
+    width: 100%;
+    margin: auto;
+
+    }
+
+    .copyright, .rs
+    {
+      margin-right: 112px;
+      margin-left:112px;
+    }
+
+    .infocontact
+    {
+      width: 790px;
+      margin: auto;
+      margin-top:40px;
+      margin-bottom:40px; 
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+
+    .mentionslegales
+    {
+      width: 40%;
+    }
+
+
+      .nomprojet
+    {
+      width: 90%;
+      padding-top: 15%;
+      left: 5%;
+      font-size: 2.2em;
+     letter-spacing: 10px;
+    }
+
+    .precedent, .suivant
+    {
+      width: 50.1%;
+      margin: auto;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      margin-left: -5px;
+    }   
+
+    .infosprojets
+    {
+      margin-left: 50%;
+    } 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================================================
+                                   MENTIONS LEGALES
+==================================================================================*/
+
+
+
+
+
+
+
+.mentionslegales
+{
+  padding-top: 170px;
+  padding-bottom: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.fondgris
+{
+  background-color: #ffffff;
+
+}
+
+
+.ML 
+{
+  padding-top: 130px;
+  font-weight: normal;
+  color: #00A597; 
+  text-align: center;
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  }
+
+
+
+h6
+{
+  font-weight: normal;
+  color: #00A597; 
+  text-align: center;
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 1.5em;
+  line-height: 25px;
+  
+
+
+}
+
+
+.mentionslegales strong
+{
+  font-family:'DroidSerif-Bold', sans-serif;  
+  font-weight: normal;  
+  color: #00A597 ; 
+
+}
+
+
+
+
+
+.pointille3
+{
+  font-family: 'BryantPro-Bold', serif;
+  letter-spacing: 0.05em;
+  color: #e2b8be; /*#00A597 : turquoise   #e2b8be : beige foncé */
+  font-size: 1.5em;
+}
+
+
+.mentionslegales p
+{
+  font-family:'DroidSerif-Regular', sans-serif;
+  font-weight: normal;
+  font-style: normal;file:///Users/domoina/Desktop/portfolio%202019/IMG/buddybaby/banniere.jpg
+  font-size: 0.8em;
+  color: #00A597;
+
+}
+
+
+
+
+
+
+
+
+/*==================================================================================
+                                   PAGE PROEJET
+==================================================================================*/
+/*.effet
+{
+  position: absolute;
+  width: 1400px;
+  height: 300px;
+
+  z-index: 1;
+}
+
+.effet:hover
+{
+    background-color: #ffffff;
+    opacity: 0.5;
+}
+*/
+
+
+
+.imgbanniere img
+{
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+
+.nomprojet
+{
+  z-index: 3;
+  position: absolute;
+  text-align: center;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #00A597; 
+  font-family: "BryantPro-Medium", sans-serif;
+/*  font-size: 2.2em;
+  letter-spacing: 10px;*/
+}
+
+
+.descriptif
+{
+  padding-top: 30px;
+  font-weight: normal;
+  color: #00A597; 
+  font-family: "DroidSerif-Italic", serif;
+  font-size: 0.7em;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+
+
+
+
+.partiecinq
+{
+  background-color: #00A597;
+}
+
+
+
+.container
+{
+  width: 80%;
+  margin:auto;
+  padding-bottom: 80px;
+ /* background-color: red;*/
+}
+
+.infosprojets
+{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.infosprojets li
+{
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+
+.infosprojets p
+{
+  font-weight: normal;
+  color: #00A597;     /*#   beige : #FBDFDD  -   turquoise : #00A597   #e2b8be : b.foncé  -  #00A597  : b.clair*/ 
+  font-family: "DroidSerif-Regular", serif;
+  font-size: 1.1em;
+}
+
+.infosprojets strong
+{
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #00A597; 
+  font-family: "BryantPro-Medium", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 4px;
+}
+
+.infosprojets em
+{
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  color: #00A597; 
+  font-family: "BryantPro-Regular", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 4px;  
+}
+
+.projetspicture li
+{
+  list-style: none;
+}
+
+.projetspicture img
+{
+  width: 100%;
+}
+
+
+
+
+.precedent, .suivant
+{
+  display: inline-block;
+  text-align: center;
+}
+
+
+.precedent li, .suivant li
+{
+  list-style: none;
+  margin-top:10px;
+  margin-bottom: 30px;
+}
+
+
+
+
+.projetnav
+{
+  font-weight: normal;
+  color: #00A597; 
+  font-family: "BryantPro-Regular", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 4px; 
+  text-decoration: none;
+}
+
+
+
+
+
+.projetnomnav
+{
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #00A597; 
+  font-family: "BryantPro-Regular", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 4px; 
+
+}
+
+
+
+
+.precedent
+{
+  background-color: #f6f4f4;
+}
+
+.precedent:hover
+{
+    background-color: #ecebeb;
+}
+
+
+.suivant
+{
+  background-color: #FBDFDD;
+}
+
+
+
+.suivant:hover
+{
+    background-color: #f9d2cf;
+    cursor: default;
+}
+
+
+
+.notebook
+{
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+
+/*==================================================================================
+                                 ***  PAGE BRITNEY *** !
+==================================================================================*/
+
+
+
+#britney
+{
+  width: 550px;
+  height: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -40px;
+}
+

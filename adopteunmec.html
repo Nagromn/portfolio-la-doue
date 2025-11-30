@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domoina Rajosoa</title>
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="CSS/jquery.fullPage.css" type="text/css"/>
+<link rel="stylesheet" href="CSS/normalize.css" type="text/css"/>
+<link rel="icon" type="image/png" href="IMG/IMG/icon.png" />
+
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="JS/domoina_rajosoa.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+  canvas = document.getElementById("canvas");
+  anim_container = document.getElementById("animation_container");
+  dom_overlay_container = document.getElementById("dom_overlay_container");
+  var comp=AdobeAn.getComposition("629566FEAEFD4577B7BE571CCAC9220F");
+  var lib=comp.getLibrary();
+  var loader = new createjs.LoadQueue(false);
+  loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+  loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+  var lib=comp.getLibrary();
+  loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+  var images=comp.getImages();  
+  if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }  
+}
+function handleComplete(evt,comp) {
+  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+  var lib=comp.getLibrary();
+  var ss=comp.getSpriteSheet();
+  var queue = evt.target;
+  var ssMetadata = lib.ssMetadata;
+  for(i=0; i<ssMetadata.length; i++) {
+    ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+  }
+  exportRoot = new lib.Sansnom1();
+  stage = new lib.Stage(canvas);  
+  //Registers the "tick" event listener.
+  fnStartAnimation = function() {
+    stage.addChild(exportRoot);
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
+  }     
+  //Code to support hidpi screens and responsive scaling.
+  AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]); 
+  AdobeAn.compositionLoaded(lib.properties.id);
+  fnStartAnimation();
+}
+</script>
+
+</head>
+
+<body onload="init();" >
+  <nav class="sidebar"> 
+      <a class="menu cursor" title="Menu">
+          <div class="menu-trigger">
+              <div class="bar-container">
+                  <div class="bar menu-bar-top"></div>
+                  <div class="bar menu-bar-mid"></div>
+                  <div class="bar menu-bar-bottom"></div>
+              </div>
+          </div>
+      </a>     
+      	<ul id="menu">
+      		<li data-menuanchor="home"><span class="homemenu"><a href="index.html#home" class="underline">Home</span></a></li>
+          	<li data-menuanchor="portfolio"><a href="index.html#portfolio" class="underline">Portfolio</a></li>
+            	<li data-menuanchor="apropos"><a href="index.html#apropos" class="underline">À propos</a></li>
+                <li data-menuanchor="competences"><a href="index.html#competences" class="underline">Compétences</a></li>
+            	<li data-menuanchor="contact"><a href="index.html#contact" class="underline">Contact</a></li>
+          </ul>
+  </nav>
+    <div id="fade-wrapper"></div>
+    
+<a href="index.html#home"><h1 id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:60px; height:60px" >
+    <canvas id="canvas" width="60" height="60" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:60px; height:60px; position: absolute; left: 0px; top: 0px; display: block;">
+    </div>
+  </h1></a>
+<!--______________________________________________________ FIN Menu ______________________________________________________ -->
+
+                              <div class="imgbanniere"> 
+
+                                <h3 class="nomprojet">Adopte un mec<br /> <!-- à changer -->
+                                                <p class="descriptif"> <!-- à changer -->
+                                                  Réalisation d'une identité visuelle et digitale pour un évènement décalé !
+                                                </p>
+                                </h3>
+
+                                  <img class="lazy" 
+                                            src="IMG/adopte/banniere.jpg"  
+                                            data-original="IMG/adopte/banniere.jpg" 
+                                            data-w320="IMG/adopte/banniere-w320.jpg" 
+                                            data-w480="IMG/adopte/banniere-w480.jpg" 
+                                            alt="Adopte un mec"/> <!-- à changer -->
+
+                                            
+                                   </div>  
+
+                                                                       <!--  <div class="effet"></div> -->
+                                      
+                                               
+                                        
+                              
+<div class="container">
+
+                          <div class="infosprojets"> <!-- à changer -->
+                                        <ul>
+                                              <li>
+                                                <strong>Catégorie</strong> <br />
+                                                <em>Multimédia</em><br /><br />
+                                              </li>
+
+                                               <li>
+                                                <strong>Année de production</strong> <br />
+                                                <em>2015</em><br /><br />
+                                              </li>
+
+                                              <li>
+                                                <strong>Membre du projet</strong><br />
+                                                <em>Domoina RAJOSOA<br />
+                                                  Soline ALLERY <br />
+                                                  Léa NOUVEL<br />
+                                                  Catalina DIAZ<br />
+                                                Maryline REIS<br /><br /></em>
+                                               </li>
+
+                                              <li>
+                                                <strong>Logiciel & outils</strong> <br />
+                                                <em>Photoshop, Indesign, Illustrator, crayons papiers</em><br /><br /><br />
+                                               </li>
+                                          </ul>
+
+                                      <p>
+                                             Le défi sur ce projet était de créer une vidéo buzz par l'intermédiaire d'un évènement, en gardant l'image décalée de la marque.
+                                       </p>
+                           </div>
+
+                            <ul class="projetspicture"><!-- à changer, NE PAS OUBLIER ALT-->
+                              <li><img class="animationimg" src="IMG/adopte/1.jpg" alt="adopte un mec" /></li>
+                              <li><img class="animationimg" src="IMG/adopte/2.jpg" alt="adopte un mec" /></li>
+                              <li><img class="animationimg" src="IMG/adopte/3.jpg" alt="adopte un mec" /></li>
+                              <li><img class="animationimg" src="IMG/adopte/4.jpg" alt="adopte un mec" /></li>
+                              <li><img class="animationimg" src="IMG/adopte/5.jpg" alt="adopte un mec" /></li>
+                              <li><img class="animationimg" src="IMG/adopte/6.jpg" alt="adopte un mec" /></li>
+                              <li><img class="animationimg" src="IMG/adopte/7.jpg" alt="adopte un mec" /></li>
+                              <li><img class="animationimg" src="IMG/adopte/8.jpg" alt="adopte un mec" /></li> 
+                            </ul>   
+
+        
+                            
+</div>
+
+        
+<a href="clairefontaine.html"><!-- à changer -->
+             
+<div class="precedent">
+
+  <ul>
+    <li class="projetnav">Projet précédent</li>
+    <li class="projetnomnav">Clairefontaine</li><!-- à changer -->
+  </ul>
+
+</div>
+</a>
+
+     <a href="britney.html">     <!-- à changer --> 
+           <div class="suivant">
+         
+               <ul>
+                  <li class="projetnav"> Projet suivant </li>
+                  <li class="projetnomnav" >Britney Spears - "toxic"</li><!-- à changer -->
+              </ul>
+                 
+           </div>     
+  </a>
+
+
+<!--=========================== CONTACT ================================-->
+
+
+
+
+
+            <div class="partiecinq">
+
+               <h5 class="titrecontact">Contact</h5>
+                <div class="contact">
+                  <p>
+                      <strong>Travaillons ensemble</strong> ! Je serai ravie de participer à vos projets et discuter d'une <strong>future collaboration</strong>.
+                      <br />
+                  <p>
+                </div>
+
+
+
+
+
+            <div class="infocontact">
+                <div class="telmail">
+                     <ul>
+                        <li><img src="IMG/IMG/telephone.png" alt="telephone" class="tel"></li>
+                        <li>+33 6 74 99 36 46</li>  
+                      </ul>
+                      <ul>          
+                        <li class="espace"><a href="mailto:r.domoina@laposte.net"><img src="IMG/IMG/email.png" alt="email de contact"></a></li>
+                        <li><a href="mailto:r.domoina@laposte.net">r.domoina@laposte.net</a></li>
+                     </ul> 
+                 </div>
+          </div> 
+
+
+      <div class="mlrs">
+
+         <div class="rs">
+           <ul>
+              <li><a href="#">Linkedin</a></li>
+              <li class="rsespace"><a href="#">Dribble</a></li>
+              <li class="rsespace"><a href="#">Instagram</a></li>
+             </ul> 
+         </div><!--
+          --><div class="copyright">
+            <p>© COPYRIGHT DOMOINA RAJOSOA    <a href="mentionslegales.html">Mentions légales</a></p>
+          </div>
+
+
+    </div>        
+
+
+
+            </div>
+
+
+
+
+
+<!--=========================== SCRIPT ================================-->
+
+
+ 
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    
+   
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="JS/jquery-1.11.1.min.js"><\/script>');
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<!--=========================== MENU ================================-->
+
+
+
+<!--APPEL menu apparition -->
+<script src="JS/menubar.js"></script> 
+<script type="text/javascript"> $(document).ready(function(){$('a.menu').menuBar();});</script>
+
+
+
+
+<!--=========================== IMAGE RESPONSIVE LOADER ================================-->
+
+
+
+<script src="JS/responsiveimageloader.js"></script>
+
+<script type="text/javascript">
+$(function(){
+    $('.lazy').jResponsiveImageLoader({
+        event : 'load'
+    });
+});
+</script>
+
+
+
+<!--=========================== SCROLLREVEAL ================================-->
+
+
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="JS/appreveal.js"></script>
+
+
+<!--=========================== EMPERCHER CLIQUE DROIT ================================-->
+
+
+
+    <script type="text/javascript">
+    //<!--
+        document.oncontextmenu = new Function("return false");
+    //-->
+    </script>
+    
+
+
+
+	
+	</body>
+</html>
